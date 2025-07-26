@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devashish Deshmukh | Full Stack Developer</title>
+  <link rel="stylesheet" href="libs/fontawesome.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+  
+</head>
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+
+<!-- Toggle Button -->
+<!-- <div class="fixed top-4 right-4 z-50">
+  <label class="inline-flex items-center cursor-pointer">
+    <input type="checkbox" id="themeToggle" class="sr-only">
+    <div class="w-14 h-8 bg-gray-400 dark:bg-gray-700 rounded-full p-1 flex items-center transition duration-300">
+      <div class="dot w-6 h-6 bg-white dark:bg-yellow-400 rounded-full shadow-md transform transition duration-300"></div>
+    </div>
+  </label>
+</div> -->
+
+
+<!-- Hero Section -->
+<section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-black via-gray-900 to-black px-4">
+  <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-fade-in-up">Hi, I'm Devashish Deshmukh</h1>
+  <p class="text-xl md:text-2xl text-gray-300 mb-6 animate-fade-in-up delay-200">A Passionate Full Stack Developer</p>
+  
+  <!-- ✅ Visible, Animated Button -->
+  <a href="#projects"
+     class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 glow-button animate-fade-in-up delay-400">
+    👇 View My Work
+  </a>
+</section>
+
+<!-- About Me Section -->
+<section id="about" class="bg-gradient-to-b from-black via-gray-900 to-black text-white py-20 px-6 overflow-hidden">
+  <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <!-- Left -->
+    <div class="space-y-10">
+      <div>
+        <h2 class="text-4xl font-bold mb-4 border-b-4 border-indigo-500 inline-block">About Me</h2>
+        <p class="text-gray-300 text-lg text-justify leading-relaxed max-w-3xl">
+          I'm a passionate <strong>Full Stack Developer</strong> skilled in HTML, CSS, JavaScript, React, Python, and Django, with a strong foundation in solving Data Structures and Algorithms problems using C++ to enhance my problem-solving and backend logic skills.
+        </p>
+      </div>
+      <div>
+        <p class="text-gray-400 mb-4">📍 Based in Pune, India</p>
+        <a href="assets/Devashish_Resume.pdf" download class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-md font-medium transition">
+          📄 Download Resume
+        </a>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="flex justify-center md:justify-end">
+      <img src="Images/profile.png" alt="Devashish Deshmukh" class="rounded-lg shadow-lg w-64 h-80 object-cover transition-all duration-700 opacity-0 transform -translate-x-20 animate-on-scroll-left" id="profileImage">
+    </div>
+  </div>
+
+  <!-- Subsections: Education | Certifications + Learning Journey -->
+  <div class="container mx-auto mt-16 grid md:grid-cols-2 gap-12">
+
+    <!-- 🎓 Education Block -->
+    <div class="transition-section animate-on-scroll-right delay-1 bg-from-indigo-900 to-purple-900 p-6 rounded-lg shadow-lg">
+      <h3 class="text-3xl font-bold text-indigo-400 mb-6 border-b border-indigo-600 pb-2">Education</h3>
+      <div class="space-y-8">
+        <div class="bg-gray-700/40 p-4 rounded-lg shadow hover:scale-[1.02] transition duration-300">
+          <h4 class="text-xl font-semibold text-white">🎓 B.E. in Information Technology</h4>
+          <p class="text-gray-300">Prof. Ram Meghe Institute of Technology & Research, Badnera</p>
+          <p class="text-sm text-indigo-300">2020 – 2024 | CGPA: 8.14</p>
+        </div>
+        <div class="bg-gray-700/40 p-4 rounded-lg shadow hover:scale-[1.02] transition duration-300">
+          <h4 class="text-xl font-semibold text-white">🏫 Higher Secondary (HSC)</h4>
+          <p class="text-gray-300">Nagar Parishad Jr. College, Chandur Bazar</p>
+          <p class="text-sm text-indigo-300">2018 – 2020 | 66.31%</p>
+        </div>
+        <div class="bg-gray-700/40 p-4 rounded-lg shadow hover:scale-[1.02] transition duration-300">
+          <h4 class="text-xl font-semibold text-white">📘 Secondary School (SSC)</h4>
+          <p class="text-gray-300">G. R. Kabra High School, Chandur Bazar</p>
+          <p class="text-sm text-indigo-300">2012 – 2018 | 87.40%</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🏅 Certifications + Learning Journey Block -->
+    <div class="space-y-12">
+
+      <!-- 📜 Certifications Swiper -->
+      <div class="transition-section animate-on-scroll-right delay-2">
+        <h3 class="text-2xl font-semibold text-white mb-6">Certifications</h3>
+        <div class="swiper mySwiper w-full">
+          <div class="swiper-wrapper">
+            <!-- Certificate 1 -->
+            <div class="swiper-slide flex flex-col items-center bg-slate-600 p-6 rounded-lg shadow-md cursor-pointer transform hover:scale-105 transition"
+              title="Click to view certificate"
+              onclick="window.open('https://leetcode.com/u/Devashish_deshmukh_/', '_blank')">
+              <img src="Images/leetcode.png" alt="Coursera" class="h-20 w-auto mb-4" />
+              <p class="text-white text-center text-sm">Solve 400+ Codes (LeetCode)</p>
+            </div>
+
+            <!-- Certificate 2
+            <div class="swiper-slide flex flex-col items-center bg-gradient-to-br from-indigo-800 to-purple-900 p-6 rounded-lg shadow-md cursor-pointer transform hover:scale-105 transition"
+              title="Click to view certificate"
+              onclick="window.open('https://codingninjas.com/certificate/dsa-cpp-example', '_blank')">
+              <img src="Images/codingninjas_logo.png" alt="Coding Ninjas" class="h-20 w-auto mb-4" />
+              <p class="text-white text-center text-sm">DSA in C++ (Coding Ninjas)</p>
+            </div> -->
+
+            <!-- Certificate 3 -->
+            <div class="swiper-slide flex flex-col items-center bg-gradient-to-r from-gray-700 to-gray-900 p-6 rounded-lg shadow-md cursor-pointer transform hover:scale-105 transition"
+              title="Click to view certificate"
+              onclick="window.open('https://www.linkedin.com/learning/certificates/8a4c6c0710751a32195051cc20ecdd724859fe2cfa0fef91fb922db0ab693343', '_blank')">
+              <img src="Images/linkedin.png" alt="ML Certificate" class="h-20 w-auto mb-4" />
+              <p class="text-white text-center text-sm">Django Essentials (LinkedIn)</p>
+            </div>
+
+            <!-- Certificate 4 -->
+            <div class="swiper-slide flex flex-col items-center bg-orange-400 p-6 rounded-lg shadow-md cursor-pointer transform hover:scale-105 transition"
+              title="Click to view certificate"
+              onclick="window.open('https://files.codingninjas.in/certificate-326952-8c97b5b59d376291f5e6f249d5f8f36f.pdf', '_blank')">
+              <img src="Images/ninjas.png" alt="ReactJS" class="h-20 w-auto mb-4" />
+              <p class="text-white text-center text-sm">C++ Fundamentals (Coding Ninjas)</p>
+            </div>
+          </div>
+
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+      </div>
+
+      <!-- 🚀 My Learning Journey -->
+<div class="transition-section animate-on-scroll-right delay-3 bg-from-indigo-900 to-purple-900 p-6 rounded-lg shadow-lg">
+  <h3 class="text-2xl font-bold text-indigo-400 mb-6 border-b border-indigo-600 pb-2">My Learning Journey</h3>
+
+  <ul class="space-y-5 text-gray-300 text-sm md:text-base">
+    <li class="flex items-start gap-3">
+      <span class="text-indigo-400 text-xl">📘</span>
+      <div>
+        <strong class="text-white">2021 –</strong> Learned the foundations of <span class="text-indigo-300 font-medium">HTML</span> and <span class="text-indigo-300 font-medium">CSS</span> to build basic websites.
+      </div>
+    </li>
+
+    <li class="flex items-start gap-3">
+      <span class="text-indigo-400 text-xl">⚙️</span>
+      <div>
+        <strong class="text-white">2022 –</strong> Explored <span class="text-indigo-300 font-medium">JavaScript</span> and <span class="text-indigo-300 font-medium">React</span> to build interactive user interfaces.
+      </div>
+    </li>
+
+    <li class="flex items-start gap-3">
+      <span class="text-indigo-400 text-xl">🧠</span>
+      <div>
+        <strong class="text-white">2023 –</strong> Mastered backend skills with <span class="text-indigo-300 font-medium">Python</span> and <span class="text-indigo-300 font-medium">Django</span>.
+      </div>
+    </li>
+
+    <li class="flex items-start gap-3">
+      <span class="text-indigo-400 text-xl">🌐</span>
+      <div>
+        <strong class="text-white">2024 –</strong> Built full-stack projects using <span class="text-indigo-300 font-medium">REST APIs</span> and improved application deployment skills.
+      </div>
+    </li>
+
+    <li class="flex items-start gap-3">
+      <span class="text-indigo-400 text-xl">💡</span>
+      <div>
+        <strong class="text-white">Present –</strong> Actively solving <span class="text-indigo-300 font-medium">DSA problems in C++</span> and creating real-world applications to sharpen problem-solving and backend logic.
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+    </div>
+
+  </div>
+</section>
+
+<!-- 🚀 Projects Section -->
+<section id="projects" class="bg-gradient-to-b from-black via-gray-900 to-black text-white py-20 px-6">
+  <div class="container mx-auto">
+    <h2 class="text-4xl font-bold mb-12 border-b-4 border-indigo-500 inline-block">Projects</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- 🎤 Project 1 -->
+      <div class="flip-card perspective transform transition duration-300 hover:scale-[1.05] hover:shadow-indigo-500/40 shadow-md rounded-xl animate-on-scroll-left opacity-0 delay-100" data-card>
+        <div class="flip-card-inner card">
+
+          <!-- Front -->
+          <div class="flip-card-front p-4 bg-gradient-to-r from-gray-700 to-gray-900 rounded-md shadow-md flex flex-col justify-between">
+            <h3 class="text-xl font-bold mb-2">🎤 Speech Emotion</h3>
+            <img src="Images/ser.png" alt="Speech Emotion" class="w-full h-32 object-cover rounded-md mb-3">
+            <p class="text-sm text-gray-300 mb-3">Real-time ML-based emotion recognition system using Python, Flask, and JavaScript with 82% accuracy.</p>
+
+            <!-- Badge + Icons -->
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs bg-purple-600 px-2 py-1 rounded-full">Machine Learning</span>
+              <div class="flex gap-2">
+                <img src="Icons/python.svg" alt="Python" class="h-5 w-5" title="Python">
+                <img src="Icons/flask.svg" alt="Flask" class="h-5 w-5" title="Flask">
+                <img src="Icons/javascript.svg" alt="JavaScript" class="h-5 w-5" title="JavaScript">
+              </div>
+            </div>
+
+            <!-- Live Demo + Read More -->
+            <div class="flex justify-between items-center">
+               <a href="https://github.com/Devashish-06/Speech-Emotion-Recognition" target="_blank" rel="noopener noreferrer" class="text-sm text-indigo-400 hover:text-white underline">🔗 GitHub</a>
+              <button class="read-more-btn text-indigo-400 hover:text-white font-medium">📖 Read More</button>
+            </div>
+          </div>
+
+          <!-- Back -->
+          <div class="flip-card-back p-4 overflow-y-auto text-sm text-gray-100">
+            <h4 class="text-lg font-bold mb-2">📘 Full Description</h4>
+            <p class="mb-4">Built a real-time speech emotion detection system using MFCCs, ML model, and Flask for API interaction. Integrated audio input and real-time emotion updates with JavaScript on front-end. Deployed locally for demo.</p>
+            <button class="back-btn text-indigo-300 underline">🔙 Back</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 💬 Project 2 -->
+      <div class="flip-card perspective transform transition duration-300 hover:scale-[1.05] hover:shadow-indigo-500/40 shadow-md rounded-xl animate-on-scroll-right opacity-0 delay-200" data-card>
+        <div class="flip-card-inner card">
+
+          <!-- Front -->
+          <div class="flip-card-front p-4 bg-gradient-to-r from-gray-700 to-gray-900 rounded-md shadow-md flex flex-col justify-between">
+            <h3 class="text-xl font-bold mb-2">💬 CallNexa</h3>
+            <img src="Images/callnexa.png" alt="CallNexa" class="w-full h-32 object-cover rounded-md mb-3">
+            <p class="text-sm text-gray-300 mb-3">Multi-participant video call app using Django, HTML, CSS, JS and Bootstrap. Supports real-time communication with clean UI.</p>
+
+            <!-- Badge + Icons -->
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs bg-blue-600 px-2 py-1 rounded-full">WebRTC App</span>
+              <div class="flex gap-2">
+                <img src="Icons/html.svg" alt="HTML" class="h-5 w-5" title="HTML">
+                <img src="Icons/css.svg" alt="CSS" class="h-5 w-5" title="CSS">
+                <img src="Icons/django.svg" alt="Django" class="h-5 w-5" title="Django">
+              </div>
+            </div>
+
+            <!-- Live Demo + Read More -->
+            <div class="flex justify-between items-center">
+               <a href="https://github.com/Devashish-06/AudioVideoCalling" target="_blank" rel="noopener noreferrer" class="text-sm text-indigo-400 hover:text-white underline">🔗 GitHub</a>
+              <button class="read-more-btn text-indigo-400 hover:text-white font-medium">📖 Read More</button>
+            </div>
+          </div>
+
+          <!-- Back -->
+          <div class="flip-card-back p-4 overflow-y-auto text-sm text-gray-100">
+            <h4 class="text-lg font-bold mb-2">📘 Full Description</h4>
+            <p class="mb-4">Developed CallNexa using Django backend and JavaScript frontend with multi-user support via WebRTC and clean UX using Bootstrap. Implemented screen sharing and mute/unmute functions. Responsive across devices.</p>
+            <button class="back-btn text-indigo-300 underline">🔙 Back</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 🧠 Project 3 -->
+      <div class="flip-card perspective transform transition duration-300 hover:scale-[1.05] hover:shadow-indigo-500/40 shadow-md rounded-xl animate-on-scroll-left opacity-0 delay-300" data-card>
+        <div class="flip-card-inner card">
+
+          <!-- Front -->
+          <div class="flip-card-front p-4 bg-gradient-to-r from-gray-700 to-gray-900 rounded-md shadow-md flex flex-col justify-between">
+            <h3 class="text-xl font-bold mb-2">🧠 Desk Mate</h3>
+            <img src="Images/desktop.png" alt="Desk Mate" class="w-full h-32 object-cover rounded-md mb-3">
+            <p class="text-sm text-gray-300 mb-3">Python desktop assistant to automate tasks like reminders, note-taking, web search, and app launch via voice or text.</p>
+
+            <!-- Badge + Icons -->
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs bg-green-600 px-2 py-1 rounded-full">Productivity</span>
+              <div class="flex gap-2">
+                <img src="Icons/python.svg" alt="Python" class="h-5 w-5" title="Python">
+                <img src="Icons/html.svg" alt="HTML" class="h-5 w-5" title="HTML">
+              </div>
+            </div>
+
+            <!-- Live Demo + Read More -->
+            <div class="flex justify-between items-center">
+               <a href="https://github.com/Devashish-06/Desktop-Assistant" target="_blank" rel="noopener noreferrer" class="text-sm text-indigo-400 hover:text-white underline">🔗 GitHub</a>
+              <button class="read-more-btn text-indigo-400 hover:text-white font-medium">📖 Read More</button>
+            </div>
+          </div>
+
+          <!-- Back -->
+          <div class="flip-card-back p-4 overflow-y-auto text-sm text-gray-100">
+            <h4 class="text-lg font-bold mb-2">📘 Full Description</h4>
+            <p class="mb-4">Designed Desk Mate using Python and Pyttsx3 for TTS. GUI built with Tkinter for quick command inputs. Performs web search, app launching, and reminder setup. Lightweight and customizable.</p>
+            <button class="back-btn text-indigo-300 underline">🔙 Back</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 🔧 Skills Section with Scroll Animations -->
+<section id="skills" class="bg-gradient-to-b from-black via-gray-900 to-black text-white py-20 px-6">
+  <div class="container mx-auto">
+    <h2 class="text-4xl font-bold mb-12 border-b-4 border-indigo-500 inline-block">Skills</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- 🌐 Frontend -->
+      <div class="backdrop-blur-sm bg-gray-800/70 p-6 rounded-xl border border-gray-700 shadow-lg hover:shadow-indigo-500/40 transition duration-300 animate-on-scroll-left opacity-0">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-400">🌐 Frontend</h3>
+
+        <!-- Skills with progress bars -->
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/html.svg" class="h-5 w-5" alt="HTML"> <span>HTML</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 95%"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/css.svg" class="h-5 w-5" alt="CSS"> <span>CSS</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 90%"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/javascript.svg" class="h-5 w-5" alt="JS"> <span>JavaScript</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 85%"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/react.svg" class="h-5 w-5" alt="React"> <span>React.js</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 80%"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/tailwind.svg" class="h-5 w-5" alt="Tailwind"> <span>Tailwind CSS</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 88%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🛠 Backend -->
+      <div class="backdrop-blur-sm bg-gray-800/70 p-6 rounded-xl border border-gray-700 shadow-lg hover:shadow-indigo-500/40 transition duration-300 animate-on-scroll-right opacity-0 delay-100">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-400">🛠 Backend</h3>
+
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/python.svg" class="h-5 w-5" alt="Python"> <span>Python</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 92%"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/django.svg" class="h-5 w-5" alt="Django"> <span>Django</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 87%"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/flask.svg" class="h-5 w-5" alt="Flask"> <span>Flask</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 82%"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/cpp.svg" class="h-5 w-5" alt="C++"> <span>C++</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🗃 Tools -->
+      <div class="backdrop-blur-sm bg-gray-800/70 p-6 rounded-xl border border-gray-700 shadow-lg hover:shadow-indigo-500/40 transition duration-300 animate-on-scroll-left opacity-0 delay-200">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-400">🗃 Database & Tools</h3>
+
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/mysql.svg" class="h-5 w-5" alt="MySQL"> <span>MySQL</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 88%"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/git.svg" class="h-5 w-5" alt="Git"> <span>Git</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 85%"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/github.svg" class="h-5 w-5" alt="GitHub"> <span>GitHub</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 84%"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <img src="Icons/vscode.svg" class="h-5 w-5" alt="VS Code"> <span>VS Code</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded h-2.5">
+            <div class="bg-indigo-500 h-2.5 rounded" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="bg-gradient-to-b from-black via-gray-900 to-black text-white py-20 px-6 overflow-hidden">
+  <div class="container mx-auto max-w-4xl">
+    <h2 class="text-4xl font-bold mb-8 border-b-4 border-indigo-500 inline-block">Contact Me</h2>
+
+    <!-- Contact Info -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mb-10">
+      <div>
+        <i class="fas fa-envelope text-indigo-400 text-3xl mb-2"></i>
+        <p>devashishdeshmukh12@gmail.com</p>
+      </div>
+      <div>
+        <i class="fas fa-phone text-indigo-400 text-3xl mb-2"></i>
+        <p>+91 78419 13502</p>
+      </div>
+      <div>
+        <i class="fas fa-map-marker-alt text-indigo-400 text-3xl mb-2"></i>
+        <p>Wakad, Pune</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form id="contactForm" class="bg-gray-900 p-6 rounded-lg shadow-lg">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" placeholder="Your Name" id="name" required class="p-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <input type="email" placeholder="Your Email" id="email" required class="p-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      </div>
+      <input type="text" placeholder="Subject" id="subject" required class="w-full mt-6 p-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <textarea placeholder="Your Message" id="message" rows="6" required class="w-full mt-6 p-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+      <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 mt-6 rounded font-semibold transition duration-300">
+        Send Message
+      </button>
+    </form>
+
+    <!-- Social Icons -->
+    <div class="flex justify-center mt-10 space-x-6 text-2xl">
+      <a href="https://github.com/" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/devashish_deshmukh_" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Resume Download Section -->
+<section class="bg-gray-900 text-white py-16 px-6">
+  <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6 border-b-4 border-indigo-500 inline-block">Resume</h2>
+    <p class="text-gray-300 mb-8">Click the button below to download my resume in PDF format.</p>
+    <a href="Devashish_Resume.pdf" download class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition duration-300">
+      <i class="fas fa-download mr-2"></i>Download Resume
+    </a>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <div class="flip-card perspective transform transition duration-300 hover:scale-[1.05] hover:shadow-indigo-500/40 shadow-md rounded-xl animate-on-scroll-left opacity-0 delay-300" data-card> -->

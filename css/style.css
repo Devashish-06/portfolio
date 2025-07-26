@@ -1,0 +1,198 @@
+
+/* Updated CSS   */
+/* ✅ Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ✅ Root Theme Variables */
+:root {
+  --primary: #11131d;
+  --secondary: #1a1e2b;
+  --accent: #5a67d8;
+  --text: #f8fafc;
+  --light-text: #9ca3af;
+}
+
+/* ✅ Profile Image Slide from Left */
+#profileImage {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all 0.8s ease-out;
+}
+#profileImage.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ✅ General Slide from Right (e.g., education, certifications) */
+.transition-section {
+  opacity: 0;
+  transform: translateX(80px) scale(0.98);
+  transition: all 2s ease;
+}
+.transition-section.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* ✅ Slide Animations for JavaScript Class Triggers */
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-slide-left {
+  animation: slideLeft 1s ease-out forwards;
+}
+.animate-slide-right {
+  animation: slideRight 1s ease-out forwards;
+}
+
+/* ✅ Fade In Up Animation */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✅ Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+.swiper-slide {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.swiper-slide:hover {
+  transform: scale(1.05) rotateY(5deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+/* ✅ Optional: Animated Gradient Background */
+.hero-bg {
+  background: linear-gradient(-45deg, #0f0f0f, #1f1f1f, #2d2d2d, #0f0f0f);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✅ Glowing Button Pulse */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0px #6366f1;
+  }
+  50% {
+    box-shadow: 0 0 15px #6366f1;
+  }
+}
+.glow-button {
+  animation: pulse-glow 2s infinite;
+}
+.glow-button:hover {
+  box-shadow: 0 0 10px #6366f1, 0 0 20px #6366f1;
+}
+
+/* ✅ Toggle Switch Animation */
+input#themeToggle:checked + div {
+  background-color: #4f46e5;
+}
+input#themeToggle:checked + div .dot {
+  transform: translateX(24px);
+}
+
+/* 🔁 Remove Old Flip CSS (Commented Out) */
+/*
+.fixed-height-card {
+  height: 520px;
+}
+.read-more-content::-webkit-scrollbar {
+  width: 6px;
+}
+.read-more-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+.perspective {
+  perspective: 1200px;
+}
+.card {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.card.flip {
+  transform: rotateY(180deg);
+}
+*/
+
+/* ✅ 🔁 NEW: Flip Card Styles */
+.perspective {
+  perspective: 1500px;
+}
+
+.flip-card {
+  position: relative;
+  min-height: 380px;
+  height: 100%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.flip-card-back::-webkit-scrollbar {
+  width: 6px;
+}
+.flip-card-back::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
