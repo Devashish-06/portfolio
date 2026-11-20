@@ -19,13 +19,13 @@ export default function About() {
               <p className="label mb-5">Fig. 01 — Profile</p>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  I'm a <strong className="text-white font-semibold">PLM Teamcenter Solution Developer</strong> with over a
-                  year of hands-on experience across Teamcenter development, administration and version upgrades. That
+                  I'm a <strong className="text-white font-semibold">PLM Teamcenter Solution Developer</strong> with {profile.experience}
+                  years of hands-on experience across Teamcenter development, administration and version upgrades. That
                   includes taking Teamcenter from <span className="text-acid font-mono text-sm">11.4</span> to{' '}
                   <span className="text-acid font-mono text-sm">2506</span> on Linux for the client Tata Hitachi.
                 </p>
                 <p>
-                  Today I build and run Teamcenter solutions for the client ACGL, Goa, as part of {profile.employer}. Outside PLM, I build full-stack web apps with
+                  I started in PLM in 2024 as a trainee at FaithPLM. Today, at {profile.employer}, I build and run Teamcenter solutions for the client ACGL, Goa. Outside PLM, I build full-stack web apps with
                   React, Django and Python, and solve DSA problems in C++ to keep my problem-solving sharp.
                 </p>
               </div>

@@ -6,7 +6,7 @@ export const profile = {
   location: 'Wakad, Pune, India',
   employer: 'Nextech PLM Solutions',
   resume: 'assets/Devashish_Resume.pdf',
-  experience: '1+', // shown in the Hero, About and Experience sections
+  experience: '2+', // Jul 2024 (FaithPLM trainee) to now // shown in the Hero, About and Experience sections
   drawingNo: `DD-${new Date().getFullYear()}-001`,
   github: 'https://github.com/Devashish-06',
   linkedin: 'https://www.linkedin.com/in/devashishdeshmukh06/',
@@ -23,12 +23,12 @@ export const sections = [
 
 export const experience = [
   {
-    rev: 'B',
+    rev: 'C',
     status: 'work',
     role: 'Teamcenter Solution Developer',
     org: 'Nextech PLM Solutions',
     client: 'ACGL, Goa',
-    dates: 'Current', // TODO: e.g. "Mar 2025 – Present"
+    dates: 'Oct 2025 – Present',
     summary:
       'Client project: develop and administer the Siemens Teamcenter PLM platform that ACGL engineering teams use to manage product data, structures and change processes.',
     bullets: [
@@ -39,12 +39,12 @@ export const experience = [
     tags: ['Teamcenter', 'BMIDE', 'ITK', 'Workflow Designer', 'Access Manager', 'Linux'],
   },
   {
-    rev: 'A',
+    rev: 'B',
     status: 'released',
     role: 'Teamcenter Upgrade Engineer',
     org: 'Nextech PLM Solutions',
     client: 'Tata Hitachi',
-    dates: 'Completed', // TODO: e.g. "Aug 2024 – Feb 2025"
+    dates: 'Completed', // TODO: add the months, e.g. "Nov 2025 – Mar 2026"
     summary: 'Client project: Teamcenter version upgrade delivered for Tata Hitachi.',
     upgrade: { from: '11.4', to: '2506', platform: 'Linux' },
     bullets: [
@@ -53,6 +53,20 @@ export const experience = [
       'Tested and validated data, customisations and workflows after the upgrade before handing over to users.',
     ],
     tags: ['Teamcenter 2506', 'Upgrade & migration', 'BMIDE', 'Linux', 'Shell scripting'],
+  },
+  {
+    rev: 'A',
+    status: 'released',
+    role: 'PLM Trainee, Teamcenter',
+    org: 'FaithPLM',
+    dates: 'Jul 2024 – Sep 2025', // TODO: confirm end date
+    summary: 'First hands-on experience with Siemens Teamcenter PLM, learning the platform while working on it as a trainee.',
+    bullets: [
+      'Installed and configured Teamcenter environments to support business requirements.',
+      'Worked in BMIDE on data models, business objects and custom configurations.',
+      'Used Teamcenter for data management, process automation and collaboration, and configured Active Workspace for a smoother user experience.',
+    ],
+    tags: ['Teamcenter', 'Installation', 'BMIDE', 'Active Workspace'],
   },
 ];
 

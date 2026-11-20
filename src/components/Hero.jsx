@@ -44,7 +44,7 @@ const titleBlock = [
   [['Experience', `${profile.experience} yr · PLM`], ['TC upgrade', '11.4 → 2506', 'text-acid']],
   [['PLM', 'Teamcenter · BMIDE · ITK · Linux']],
   [['Web', 'React · Django · Python · C++']],
-  [['Status', '● In service', 'text-acid'], ['Sheet', '1 / 5'], ['Rev', 'B']],
+  [['Status', '● In service', 'text-acid'], ['Sheet', '1 / 5'], ['Rev', 'C']],
 ];
 
 export default function Hero() {
