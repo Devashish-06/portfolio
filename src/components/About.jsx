@@ -22,10 +22,10 @@ export default function About() {
                   I'm a <strong className="text-white font-semibold">PLM Teamcenter Solution Developer</strong> with over a
                   year of hands-on experience across Teamcenter development, administration and version upgrades. That
                   includes taking Teamcenter from <span className="text-acid font-mono text-sm">11.4</span> to{' '}
-                  <span className="text-acid font-mono text-sm">2506</span> on Linux at Tata Hitachi.
+                  <span className="text-acid font-mono text-sm">2506</span> on Linux for the client Tata Hitachi.
                 </p>
                 <p>
-                  Today I build and run Teamcenter solutions at ACGL, Goa. Outside PLM, I build full-stack web apps with
+                  Today I build and run Teamcenter solutions for the client ACGL, Goa, as part of {profile.employer}. Outside PLM, I build full-stack web apps with
                   React, Django and Python, and solve DSA problems in C++ to keep my problem-solving sharp.
                 </p>
               </div>
@@ -80,14 +80,14 @@ export default function About() {
           <Reveal delay={0.1} className="tile">
             <i className="fas fa-location-dot text-ver text-xl mb-4" aria-hidden="true" />
             <p className="font-display text-xl font-semibold text-white">{profile.location}</p>
-            <p className="text-sm text-gray-400 mt-1">Working at ACGL, Goa</p>
+            <p className="text-sm text-gray-400 mt-1">Client project in Goa</p>
           </Reveal>
 
           {/* Currently */}
           <Reveal delay={0.15} className="tile">
             <p className="case-label mb-2">Currently</p>
             <p className="text-gray-300 leading-relaxed">
-              Teamcenter Solution Developer at <span className="text-acid">ACGL, Goa</span>, working on development and admin.
+              Teamcenter Solution Developer at <span className="text-acid">{profile.employer}</span>, supporting the client ACGL, Goa on development and admin.
             </p>
           </Reveal>
 

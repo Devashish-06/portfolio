@@ -3,7 +3,8 @@
 export const profile = {
   name: 'Devashish Deshmukh',
   email: 'devashishdeshmukh12@gmail.com',
-  location: 'Wakad, Pune, India', // TODO: confirm — you currently work in Goa
+  location: 'Wakad, Pune, India',
+  employer: 'Nextech PLM Solutions',
   resume: 'assets/Devashish_Resume.pdf',
   experience: '1+', // shown in the Hero, About and Experience sections
   drawingNo: `DD-${new Date().getFullYear()}-001`,
@@ -25,11 +26,11 @@ export const experience = [
     rev: 'B',
     status: 'work',
     role: 'Teamcenter Solution Developer',
-    org: 'ACGL',
-    place: 'Goa, India',
+    org: 'Nextech PLM Solutions',
+    client: 'ACGL, Goa',
     dates: 'Current', // TODO: e.g. "Mar 2025 – Present"
     summary:
-      'Develop and administer the Siemens Teamcenter PLM platform that engineering teams use to manage product data, structures and change processes.',
+      'Client project: develop and administer the Siemens Teamcenter PLM platform that ACGL engineering teams use to manage product data, structures and change processes.',
     bullets: [
       'Build Teamcenter customisations and solutions for business requirements, from data-model configuration in BMIDE to server-side extensions.',
       'Handle day-to-day administration: users, groups and roles, access rules, preferences and workflow configuration.',
@@ -41,9 +42,10 @@ export const experience = [
     rev: 'A',
     status: 'released',
     role: 'Teamcenter Upgrade Engineer',
-    org: 'Tata Hitachi',
-    place: null,
+    org: 'Nextech PLM Solutions',
+    client: 'Tata Hitachi',
     dates: 'Completed', // TODO: e.g. "Aug 2024 – Feb 2025"
+    summary: 'Client project: Teamcenter version upgrade delivered for Tata Hitachi.',
     upgrade: { from: '11.4', to: '2506', platform: 'Linux' },
     bullets: [
       'Upgraded Teamcenter from 11.4 to 2506 on a Linux environment, a jump across several major releases.',

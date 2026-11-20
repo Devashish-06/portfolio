@@ -59,7 +59,7 @@ export default function Experience() {
 
           <ol className="space-y-6">
             {experience.map((job, i) => (
-              <Reveal as="li" key={job.org} delay={i * 0.1}>
+              <Reveal as="li" key={job.rev} delay={i * 0.1}>
                 <article className="tile md:grid md:grid-cols-[110px_1fr_160px] gap-0 !p-0 overflow-hidden">
                   {/* Rev */}
                   <div className="relative flex md:block items-center gap-4 px-6 pt-6 md:p-8 md:border-r border-lav/10">
@@ -84,7 +84,7 @@ export default function Experience() {
                   <div className="p-6 md:p-8">
                     <h3 className="text-xl md:text-2xl font-bold">{job.role}</h3>
                     <p className="text-lav mt-1 mb-4">
-                      {job.org}{job.place && <span className="text-gray-500"> · {job.place}</span>}
+                      {job.org}{job.client && <span className="text-gray-500"> · Client: {job.client}</span>}
                     </p>
 
                     {job.upgrade && (

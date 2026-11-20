@@ -39,7 +39,8 @@ const fadeUp = (delay) => ({
 // CAD title-block rows: [ [key, value, extraClass?], ... ] per row
 const titleBlock = [
   [['Title', 'PLM Teamcenter & Full Stack Developer']],
-  [['Drawn by', 'D. Deshmukh'], ['Organisation', 'ACGL, Goa']],
+  [['Drawn by', 'D. Deshmukh'], ['Organisation', 'Nextech PLM Solutions']],
+  [['Clients', 'ACGL, Goa · Tata Hitachi']],
   [['Experience', `${profile.experience} yr · PLM`], ['TC upgrade', '11.4 → 2506', 'text-acid']],
   [['PLM', 'Teamcenter · BMIDE · ITK · Linux']],
   [['Web', 'React · Django · Python · C++']],
@@ -66,7 +67,7 @@ export default function Hero() {
               </span>
               In service
             </span>
-            <span className="label">Teamcenter Solution Developer · ACGL, Goa</span>
+            <span className="label">Teamcenter Solution Developer · {profile.employer}</span>
           </motion.div>
 
           <h1 className="text-[3.3rem] sm:text-7xl lg:text-[6.2rem] font-bold leading-[0.95] mb-8" aria-label={profile.name}>
