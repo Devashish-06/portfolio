@@ -8,7 +8,7 @@ export const profile = {
   experience: '1+', // shown in the Hero, About and Experience sections
   drawingNo: `DD-${new Date().getFullYear()}-001`,
   github: 'https://github.com/Devashish-06',
-  linkedin: '', // TODO: add your LinkedIn profile URL; the icon is hidden while this is empty
+  linkedin: 'https://www.linkedin.com/in/devashishdeshmukh06/',
   leetcode: 'https://leetcode.com/u/Devashish_deshmukh_/',
 };
 
