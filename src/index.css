@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────── Base ───────────────────────── */
+@layer base {
+  :root {
+    --lavender: #CBB3E8;
+    --lime: #D4FF3F;
+    --vermilion: #E34234;
+    --ink: #0E0C13;
+    --panel: #17141F;
+    --line: rgba(203, 179, 232, 0.16);
+  }
+  html {
+    position: relative; /* lets Framer Motion measure scroll offsets correctly */
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-ink text-gray-300 font-sans antialiased;
+    /* Blueprint grid */
+    background-image:
+      linear-gradient(rgba(203, 179, 232, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(203, 179, 232, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-white;
+    letter-spacing: -0.02em;
+  }
+  ::selection { background: var(--lime); color: var(--ink); }
+  :focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; border-radius: 4px; }
+}
+
+/* ───────────────────────── Components ───────────────────────── */
+@layer components {
+  .section       { @apply relative px-5 sm:px-8 py-24 md:py-32; }
+  .wrap          { @apply max-w-6xl mx-auto; }
+  .section-title { @apply text-3xl md:text-5xl font-bold mb-12 md:mb-16 max-w-3xl leading-[1.05]; }
+  .label         { @apply font-mono text-[10.5px] tracking-[0.16em] uppercase text-gray-500; }
+  .case-label    { @apply font-mono text-[10.5px] tracking-[0.16em] uppercase text-ver; }
+
+  .tile          { @apply relative bg-panel/80 border border-lav/10 rounded-lg p-6 transition-colors duration-300 hover:border-lav/30; }
+
+  .btn-primary   { @apply inline-flex items-center justify-center gap-2 bg-acid text-ink font-semibold text-sm px-5 py-3 rounded-md transition-colors hover:bg-lav; }
+  .btn-ghost     { @apply inline-flex items-center justify-center gap-2 border border-lav/30 text-white font-medium text-sm px-5 py-3 rounded-md transition-colors hover:border-acid hover:text-acid; }
+  .tag           { @apply inline-flex items-center gap-1.5 font-mono text-[11px] px-2.5 py-1 rounded bg-white/[0.04] border border-lav/15 text-lav; }
+  .social        { @apply w-11 h-11 inline-flex items-center justify-center rounded-md border border-lav/20 text-lav transition-colors hover:border-acid hover:text-acid; }
+  .nav-link      { @apply font-mono text-xs uppercase tracking-[0.12em] text-gray-400 transition-colors hover:text-acid; }
+  .nav-link.active { @apply text-acid; }
+  .field         { @apply w-full p-3.5 rounded-md bg-ink text-white placeholder-gray-600 border border-lav/15 transition focus:outline-none focus:border-lav focus:ring-2 focus:ring-lav/25; }
+
+  .status        { @apply inline-flex items-center gap-2 font-mono text-[10.5px] font-medium tracking-[0.14em] uppercase px-2.5 py-1 rounded border whitespace-nowrap; }
+  .status-work   { @apply text-acid border-acid/40 bg-acid/[0.06]; }
+  .status-rel    { @apply text-lav border-lav/30 bg-lav/[0.05]; }
+
+  .sheet-head    { @apply flex items-center gap-4 font-mono text-[10.5px] tracking-[0.18em] uppercase text-gray-500 mb-8; }
+}
+
+/* ───────────────────────── Drawing details ───────────────────────── */
+
+/* Film grain */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Corner registration marks */
+.frame::before,
+.frame::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  border-color: var(--lime);
+  opacity: 0.8;
+}
+.frame::before { top: -1px; left: -1px; border-top: 1.5px solid; border-left: 1.5px solid; }
+.frame::after  { bottom: -1px; right: -1px; border-bottom: 1.5px solid; border-right: 1.5px solid; }
+
+/* Outlined display text */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--lavender);
+}
+
+/* Navigation */
+#siteNav {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+#siteNav.nav-scrolled {
+  background-color: rgba(14, 12, 19, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: var(--line);
+}
+
+/* Hero glows */
+.hero-bg {
+  background:
+    linear-gradient(to bottom, transparent 70%, var(--ink) 100%),
+    radial-gradient(50% 45% at 15% 25%, rgba(203, 179, 232, 0.14), transparent 70%),
+    radial-gradient(40% 40% at 90% 85%, rgba(227, 66, 52, 0.11), transparent 70%),
+    radial-gradient(30% 30% at 75% 15%, rgba(212, 255, 63, 0.05), transparent 70%);
+}
+
+/* CAD title block */
+.tb {
+  position: relative;
+  border: 1px solid rgba(203, 179, 232, 0.35);
+  background: rgba(23, 20, 31, 0.88);
+  backdrop-filter: blur(6px);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+.tb-row { display: grid; border-top: 1px solid var(--line); }
+.tb-row:first-child { border-top: 0; }
+.tb-cell { padding: 0.7rem 0.9rem; border-left: 1px solid var(--line); min-width: 0; }
+.tb-cell:first-child { border-left: 0; }
+.tb-k { display: block; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8E879E; margin-bottom: 0.2rem; }
+.tb-v { color: #fff; font-size: 12.5px; overflow-wrap: anywhere; }
+
+/* Dimension line */
+.dim {
+  position: relative;
+  height: 14px;
+  border-left: 1px solid var(--vermilion);
+  border-right: 1px solid var(--vermilion);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dim::before {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto 0;
+  height: 1px;
+  background: var(--vermilion);
+}
+.dim span {
+  position: relative;
+  background: var(--ink);
+  padding: 0 0.6rem;
+  font: 500 10px/1 "JetBrains Mono", monospace;
+  letter-spacing: 0.16em;
+  color: var(--vermilion);
+}
+
+/* Ruler */
+.ruler {
+  height: 14px;
+  border-bottom: 1px solid rgba(203, 179, 232, 0.3);
+  background-image:
+    repeating-linear-gradient(90deg, rgba(203, 179, 232, 0.55) 0 1px, transparent 1px 100px),
+    repeating-linear-gradient(90deg, rgba(203, 179, 232, 0.25) 0 1px, transparent 1px 10px);
+  background-size: 100% 14px, 100% 6px;
+  background-position: bottom, bottom;
+  background-repeat: no-repeat;
+}
+
+/* Spec table (projects) */
+.spec > div {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(203, 179, 232, 0.1);
+}
+.spec dt { @apply case-label pt-0.5; }
+.spec dd { @apply text-sm text-gray-300; }
+
+/* Bill of materials */
+.bom th {
+  @apply label text-left font-normal px-5 py-3.5 border-b border-lav/15 whitespace-nowrap;
+}
+.bom td { @apply px-5 py-3 border-b border-lav/[0.07] align-middle; }
+.bom tbody tr { transition: background-color 0.2s; }
+.bom tbody tr:hover { background: rgba(203, 179, 232, 0.04); }
+.bom tbody tr:last-child td { border-bottom: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
